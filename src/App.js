@@ -23,8 +23,8 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>Todo App</h1>
+    <div style={{ fontFamily: 'Arial, sans-serif', maxWidth: '400px', margin: 'auto', marginTop: '50px', padding: '20px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+      <h1 style={{ textAlign: 'center' }}>Todo App</h1>
       <TodoInput addTodo={addTodo} />
       <TodoList todos={todos} toggleTodo={toggleTodo} />
     </div>
