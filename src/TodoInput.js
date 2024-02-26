@@ -9,15 +9,24 @@ const TodoInput = ({ addTodo }) => {
 
     const handleAddTodo = () => {
         if (todoText.trim() !== '') {
-        addTodo(todoText);
-        setTodoText('');
+            addTodo(todoText);
+            setTodoText('');
         }
+    };
+
+    const inputStyle = {
+        marginRight: '10px', // Adjust this value as needed
     };
 
     return (
         <div>
-            <input type="text" value={todoText} onChange={handleInputChange} />
-            <button onClick={handleAddTodo}>Add Todo</button>
+            <input
+                type="text"
+                value={todoText}
+                onChange={handleInputChange}
+                style={inputStyle}
+            />
+        <button onClick={handleAddTodo}>Add Todo</button>
         </div>
     );
 };
